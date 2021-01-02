@@ -1,5 +1,9 @@
 <template>
-  <div class="stake" v-if="this.$parent.address != null">
+  <div class="stake">
+    <div v-if="this.$parent.client == null">
+        Please Connect Wallet
+    </div>
+    <div v-if="this.$parent.client != null">
     <div class="card mt-5" style="border:none">
       <div class="row mx-auto mrow">
         <span style="mr-2">Total Value Locked (USD) <br>
@@ -60,6 +64,7 @@
 
 
   </div>
+  </div>
 </template>
 <style scoped>
   .stake {
@@ -69,16 +74,16 @@
 <script>
   export default {
     data: () => ({
-      lpBalance: 0,
-      staked: 0,
-      claimable: 0,
-      allowed: 0,
-      ethinPool: 0,
-      supplyPool: 0,
-      tokenPool: 0,
-      averageFeesPerBlockEpoch: 0,
-      lpBalanceOnVault: 0,
-      est_apy: 0
+      lpBalance: '0',
+      staked: '0',
+      claimable: '0',
+      allowed: '0',
+      ethinPool: '0',
+      supplyPool: '0',
+      tokenPool: '0',
+      averageFeesPerBlockEpoch: '0',
+      lpBalanceOnVault: '0',
+      est_apy: '0'
     }),
     methods: {
       getData: function () {

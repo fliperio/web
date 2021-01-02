@@ -25,38 +25,6 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body text-center">
-          60 Minutes <br>
-          <small>Delay Trade</small>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body text-center">
-          512 <br>
-          <small>Holder</small>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body text-center">
-          50% <br>
-          <small>APY</small>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body text-center">
-          1M $ <br>
-          <small>Value Locked</small>
-        </div>
-      </div>
-    </div>
     
 
   </div>

@@ -7,6 +7,7 @@ import marketnfts from '../views/market.vue'
 import gov from '../views/gov.vue'
 import referral from '../views/referral.vue'
 import stdetail from '../views/detail/stakedetail.vue'
+import buy from '../views/buy.vue'
 
 import lge from '../views/lge.vue'
 
@@ -52,6 +53,11 @@ const routes = [
     path: '/stakedetail',
     name: 'Stake Detail',
     component: stdetail
+  },
+  {
+    path: '/buy',
+    name: 'Buy Fliper',
+    component: buy
   }
 ]
 

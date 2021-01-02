@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light ">
-      <a class="navbar-brand ml-5" href="#"><img src="@/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+      <a class="navbar-brand ml-5" href="#"><img src="@/assets/logo.png" width="90" height="30" class="d-inline-block align-top" alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -10,18 +10,19 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
         <div class="navbar-nav mx-auto">
-          <router-link to="/" class="nav-link active">Dashboard</router-link>
-          <router-link to="/liquidity" class="nav-link active">Liquidity Event</router-link>
-          <router-link to="/stake" class="nav-link">Farm</router-link>
-          <router-link to="/gov" class="nav-link">GOV</router-link>
-          <router-link to="/nfts" class="nav-link">NFTS (soon)</router-link>
+          <router-link to="/" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/' }">Dashboard</router-link>
+          <router-link to="/buy" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/buy' }">Buy</router-link>
+          <router-link to="/liquidity" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/liquidity' }">Liquidity Event</router-link>
+          <router-link to="/stake" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/stake' }">Farm</router-link>
+          <router-link to="/buy" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/gov' }">Buy</router-link>
+          <router-link to="/nfts" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/nfts' }">NFTS (soon)</router-link>
         </div>
         <button style="border-width:3px;" class="btn btn-outline-dark btn-rounded mr-5" data-toggle="modal"
           data-target="#connect"><span v-if="this.address == null">Connect Wallet</span><span v-else>( e {{ this.client.utils.fromWei(this.ethBalance).substring(0,4) }} )   -  {{ this.address.substring(0,7) }}...{{ this.address.substring(this.address.length - 6,this.address.length - 1) }}</span></button>
       </div>
     </nav>
     <!-- Modal -->
-    <div class="modal fade" id="connect"  tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="connect" ref="connect"  tabindex="-1" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog" v-if="this.address == null">
         <div class="modal-content">
@@ -100,7 +101,7 @@
       <!-- Footer Elements -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-2">© 2020 FLIPER
+      <div class="footer-copyright text-center py-2"> © 2020 FLIPER.All rights reserved.
       </div>
       <!-- Copyright -->
 
@@ -191,6 +192,7 @@
             that.FLIPER = new that.client.eth.Contract(ABI_FLIPER, '0x10FC1AF52C117bC29D56eb7C2187AddB37CD4201');
             that.lp = new that.client.eth.Contract(ABI_LP, '');
             that.vault = new that.client.eth.Contract(ABI_VAULT, '')
+            window.$('#connect').modal('hide')
           })
           .catch(() => {
 
@@ -208,6 +210,7 @@
       if(findGetParameter('r')) {
         localStorage.setItem('r', findGetParameter('r'))
       }
+      
       setInterval(this.getData, 3000)
     }
   }
