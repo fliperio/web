@@ -14,7 +14,7 @@
           <router-link to="/buy" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/buy' }">Buy</router-link>
           <router-link to="/liquidity" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/liquidity' }">Liquidity Event</router-link>
           <router-link to="/stake" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/stake' }">Farm</router-link>
-          <router-link to="/buy" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/gov' }">Buy</router-link>
+          <router-link to="/gov" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/gov' }">GOV</router-link>
           <router-link to="/nfts" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/nfts' }">NFTS (soon)</router-link>
         </div>
         <button style="border-width:3px;" class="btn btn-outline-dark btn-rounded mr-5" data-toggle="modal"
@@ -79,16 +79,16 @@
         <div class="row">
 
           <!-- Grid column -->
-          <div class="col-md-12 py-4">
+          <div class="col-md-12 py-2">
             <div class="mb-1 text-center">
 
               <!-- Twitter -->
               <a class="tw-ic">
-                <i class="fab fa-twitter fa-lg text-dark mr-md-5 mr-3 fa-2x"> </i>
+                <i class="fab fa-twitter fa-lg text-dark mr-md-3 mr-3 fa-2x"> </i>
               </a>
               <!--Pinterest-->
               <a class="pin-ic">
-                <i class="fab fa-pinterest fa-lg text-dark fa-2x"> </i>
+                <i class="fab fa-telegram fa-lg text-dark fa-2x"> </i>
               </a>
             </div>
           </div>
@@ -101,7 +101,7 @@
       <!-- Footer Elements -->
 
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-2"> © 2020 FLIPER.All rights reserved.
+      <div class="footer-copyright text-center"> © 2020 FLIPER.All rights reserved.
       </div>
       <!-- Copyright -->
 
@@ -111,6 +111,9 @@
 </template>
 
 <style>
+  body{
+    overflow-x: hidden;
+  }
   .footer-copyright {
     background: white;
     color: black;
@@ -125,6 +128,7 @@
     border-width: 3px;
     border-top-style: solid;
     border-color: black;
+    height: 80px;
   }
 
   .navbar {

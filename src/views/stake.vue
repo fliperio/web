@@ -1,7 +1,10 @@
 <template>
   <div class="stake">
-    <div v-if="this.$parent.client == null">
-        Please Connect Wallet
+    <div  v-if="this.$parent.client == null">
+        <center>
+        <h1 class="mt-5">Please Connect Wallet</h1>
+        <img width="200px" style="margin-top:55px" src="@/assets/wallet.png">
+        </center>
     </div>
     <div v-if="this.$parent.client != null">
     <div class="card mt-5" style="border:none">
