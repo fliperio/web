@@ -11,7 +11,7 @@
 
         <div class="navbar-nav mx-auto">
           <router-link to="/" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/' }">Dashboard</router-link>
-          <router-link to="/buy" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/buy' }">Buy</router-link>
+          <!-- <router-link to="/buy" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/buy' }">Buy</router-link> -->
           <router-link to="/liquidity" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/liquidity' }">Liquidity Event</router-link>
           <router-link to="/stake" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/stake' }">Farm</router-link>
           <router-link to="/gov" class="nav-link" :class="{ 'active': this.$router.currentRoute.path == '/gov' }">GOV</router-link>
@@ -68,9 +68,11 @@
       </div>
 
     </div>
-    <router-view />
+    <div class="mb-5 pb-5">
+      <router-view />
+    </div>
     <!-- Footer -->
-    <footer class="page-footer">
+    <footer class="page-footer mt-5">
 
       <!-- Footer Elements -->
       <div class="container">

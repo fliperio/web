@@ -5,7 +5,7 @@
             <h3 v-if="!liquidityGenerationOngoing">Our Liquidity Event is END Claim Your LP</h3>
         </center>
         
-        <div class="card card-liqiud" id="mid">
+        <div class="card">
             <div class="card-body">
                 <div class="row">
                      <div class="col-md-6 mt-2">
@@ -70,6 +70,14 @@
                     > After Liquidity Event Done You Can Get Your LP Token <br />
                     > Staking Will Work After LGE <br />
                 </center>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5>Referral Program</h5>
+                <input type="text" value="https://fliper.io/?ref=12312" class="form-control">
+                <small>Invite Your Friend And Get Juicy Reward After LGE</small>
+
             </div>
         </div>
 
