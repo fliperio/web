@@ -93,3 +93,12 @@
   overflow: hidden;
 }
 </style>
+
+
+<script>
+export default {
+        mounted: function () {
+                this.$router.push('/liquidity')
+        }
+}
+</script>

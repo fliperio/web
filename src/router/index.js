@@ -56,7 +56,7 @@ const routes = [
     component: stdetail
   },
   {
-    path: '/nft/:any',
+    path: '/nft/:tokenId',
     name: 'NFT Detail',
     component: nftdetail
   },
